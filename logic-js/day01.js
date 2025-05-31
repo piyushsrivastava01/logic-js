@@ -66,3 +66,56 @@
 // if(Num1 > Num2 && Num1>Num3)alert(Num1, " is Greatest value")
 // if(Num2 > Num1 && Num2>Num3)alert(Num2, " is Greatest value")
 // else alert(Num3, " is Greatest value");
+
+
+
+let person = Number(prompt(
+    "please Enter you identity\n" + 
+    "press 1. if Civilian\n"+
+    "press 2. if student"
+));
+let age = Number(prompt('Enter your age'))
+let dis = 20;
+switch (person) {
+    case 1:
+        if(age>=60){
+           let  price = 120;
+            alert('Ticket price is:'+ price)
+        }
+        else if (age>=13 && age<60){
+           let  price = 250;
+            alert('Ticket price is:'+ price)
+        }
+        else if (age>5 && age<=12){
+           let  price = 100;
+            alert('Ticket price is:'+ price)
+        }
+        else
+            alert('You got free ticket: ')
+            break;
+
+    case 2:
+        if(age>=60){
+            let price = 120
+            let amount = price - (price * dis/100)
+            alert('Congratulation you have to pay '+ amount);
+        }
+        else if (age>=13 && age<60){
+           let price = 250;
+            let amount = price - (price *(dis/100))
+            alert('Congratulation you have to pay '+ amount);
+        }
+        else if (age>5 && age<=12){
+            let price = 100
+            let amount = price - (price *(dis/100))
+            alert('Congratulation you have to pay '+ amount);
+        }
+        else
+            alert('You got free Ticket')
+            break;
+
+            
+    default:
+        alert('enter a valid input\n press 1 for Civilian\n press 2 for student \n And give positive age value:')
+        break;
+}
